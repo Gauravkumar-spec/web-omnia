@@ -1,18 +1,51 @@
-import {Button} from "@/components/ui/button"
-import { useRouter } from "next/navigation"
+// "use client"
+// import {Button} from "@/components/ui/button"
+// import { useRouter } from "next/navigation"
 
-export default function button({content,route=""}) {
-    const router = useRouter();
-    return (
-        <>
-        <Button onClick={() => router.push(route)} className="bg-[url('/button.jpg')] bg-center h-13 w-38 rounded-full flex cursor-pointer">
-        <div>
-         <h1 className="text-sm font-bold">{content}</h1>   
-        </div>
-        <div className="bg-black h-8 w-8 rounded-full flex justify-center items-center">
-            <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 fill-current text-white" viewBox="0 0 640 640"><path d="M566.6 342.6C579.1 330.1 579.1 309.8 566.6 297.3L406.6 137.3C394.1 124.8 373.8 124.8 361.3 137.3C348.8 149.8 348.8 170.1 361.3 182.6L466.7 288L96 288C78.3 288 64 302.3 64 320C64 337.7 78.3 352 96 352L466.7 352L361.3 457.4C348.8 469.9 348.8 490.2 361.3 502.7C373.8 515.2 394.1 515.2 406.6 502.7L566.6 342.7z"/></svg>
-        </div>
-        </Button>
-        </>
-    )
+// export default function button({content,route=""}) {
+//     const router = useRouter();
+//     return (
+//         <>
+//         <Button onClick={() => router.push(route)} className="bg-[url('/button.jpg')] bg-center h-13 w-38 rounded-full flex cursor-pointer">
+//         <div>
+//          <h1 className="text-sm font-bold">{content}</h1>   
+//         </div>
+//         <div className="bg-black h-8 w-8 rounded-full flex justify-center items-center">
+//             <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 fill-current text-white" viewBox="0 0 640 640"><path d="M566.6 342.6C579.1 330.1 579.1 309.8 566.6 297.3L406.6 137.3C394.1 124.8 373.8 124.8 361.3 137.3C348.8 149.8 348.8 170.1 361.3 182.6L466.7 288L96 288C78.3 288 64 302.3 64 320C64 337.7 78.3 352 96 352L466.7 352L361.3 457.4C348.8 469.9 348.8 490.2 361.3 502.7C373.8 515.2 394.1 515.2 406.6 502.7L566.6 342.7z"/></svg>
+//         </div>
+//         </Button>
+//         </>
+//     )
+// }
+
+'use client'
+import { Button } from "@/components/ui/button";
+import { useRouter } from "next/navigation";
+
+export default function CustomButton({ content, route = "" }) {
+  const router = useRouter();
+
+  return (
+    <Button
+      onClick={() => router.push(route)}
+      className="
+        bg-[url('/button.jpg')] bg-center h-13 w-38 rounded-full
+        flex items-center justify-between cursor-pointer
+        overflow-hidden group transition-all duration-300 ease-in-out
+      "
+    >
+      <div>
+        <h1 className="text-sm font-bold">{content}</h1>
+      </div>
+      <div className="bg-black h-8 w-8 rounded-full flex justify-center items-center transition-all duration-500 group-hover:translate-x-[-12px]">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="w-6 h-6 fill-current text-white"
+          viewBox="0 0 640 640"
+        >
+          <path d="M566.6 342.6C579.1 330.1 579.1 309.8 566.6 297.3L406.6 137.3C394.1 124.8 373.8 124.8 361.3 137.3C348.8 149.8 348.8 170.1 361.3 182.6L466.7 288L96 288C78.3 288 64 302.3 64 320C64 337.7 78.3 352 96 352L466.7 352L361.3 457.4C348.8 469.9 348.8 490.2 361.3 502.7C373.8 515.2 394.1 515.2 406.6 502.7L566.6 342.7z" />
+        </svg>
+      </div>
+    </Button>
+  );
 }

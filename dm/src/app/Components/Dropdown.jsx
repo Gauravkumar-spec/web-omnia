@@ -1,3 +1,4 @@
+"use client"
 import React, { useEffect, useRef, useState } from "react";
 import "./styles/Dropdown.css";
 import Link from "next/link";

@@ -80,6 +80,7 @@ import {
 } from "@/components/ui/card";
 import Header from "./Header";
 import Button from "./Miscellaneous/button";
+import {motion} from "framer-motion"
 
 export default function Hero() {
     return (
@@ -95,20 +96,24 @@ export default function Hero() {
 
                         {/* LEFT SIDE — TEXT */}
                         <div className="flex flex-col justify-center lg:items-start md:items-start sm:items-center text-left text-white">
+                            <motion.div initial={{opacity:0}} animate={{opacity:1}} transition={{duration:1, ease:"easeIn"}}>
                             <h1 className="text-4xl sm:text-6xl font-bold leading-tight">
                                 Omnia Automation and Beyond
                             </h1>
-
+                            </motion.div>
+                            <motion.section initial={{opacity:0}} animate={{opacity:1}} transition={{delay:.6, duration:1, ease:"easeIn"}}>
                             <p className="lg:text-xl text-base font-medium my-4 opacity-90">
                                 Omnia brings the power of data science and artificial intelligence
                                 to craft your business.
                             </p>
-
+                            </motion.section>
+                            <motion.section initial={{opacity:0}} animate={{opacity:1}} transition={{delay:1, duration:1, ease:"easeIn"}}>
                             <div className="mt-6">
                                 <Button route="/about" content="More Details" />
                             </div>
+                            </motion.section>
                         </div>
-
+                        <motion.section initial={{opacity:0}} animate={{opacity:1}} transition={{delay:2, duration:1, ease:"easeIn"}}>
                         <div className="flex justify-center lg:justify-end">
                             {/* <Card className="w-full bg-[#333e41]/50 border border-[#333e41] rounded-4xl relative overflow-hidden">
 
@@ -188,6 +193,7 @@ export default function Hero() {
                             </Card>
 
                         </div>
+                        </motion.section>
                     </div>
                 </div>
             </div>

@@ -4,6 +4,12 @@ import BB from './Miscellaneous/BB';
 
 export default function Footer() {
     return (
+        <motion.section
+  initial={{ opacity: 0, y: 40 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  exit={{ opacity: 0 }}
+  transition={{ duration: 1 }}
+>
         <div className='flex justify-center'>
             <div className="relative w-19/20 bg-[url('/background.jpg')] bg-cover bg-center rounded-4xl my-3 border border-[#333e41]">
             <div className="absolute bg-[#1c1d23]/70 inset-0"></div>
@@ -180,5 +186,6 @@ export default function Footer() {
                 </div>
             </div>
         </div>
+        </motion.section>
     );
 }
