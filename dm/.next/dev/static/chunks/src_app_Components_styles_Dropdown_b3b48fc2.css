@@ -1,0 +1,68 @@
+/* [project]/src/app/Components/styles/Dropdown.css [app-client] (css) */
+.dropbtn {
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 10px;
+  font-size: 14px;
+}
+
+.dropbtn:hover {
+  color: #000;
+  background-color: #fff;
+}
+
+.dropdown {
+  font-family: Arial, sans-serif;
+  display: inline-block;
+  position: relative;
+}
+
+.dropdown-content {
+  z-index: 1000;
+  background-color: #1d2027;
+  border-radius: 6px;
+  min-width: 180px;
+  padding: 6px 0;
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  box-shadow: 0 8px 16px #0003;
+}
+
+.dropdown-content a, .submenu-title {
+  color: #fff;
+  white-space: nowrap;
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover, .submenu-title:hover {
+  background-color: #000000a9;
+}
+
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-content-sub {
+  z-index: 1100;
+  background-color: #f9f9f9;
+  border-radius: 6px;
+  min-width: 160px;
+  padding: 6px 0;
+  position: absolute;
+  top: 0;
+  right: 100%;
+  box-shadow: 0 8px 16px #00000026;
+}
+
+.submenu-title {
+  cursor: pointer;
+  justify-content: space-between;
+  display: flex;
+}
+
+/*# sourceMappingURL=src_app_Components_styles_Dropdown_b3b48fc2.css.map*/
